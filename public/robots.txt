@@ -1,0 +1,6 @@
+# Robots.txt for MoneyWise Starter
+User-agent: *
+Allow: /
+
+# XML Sitemap location
+Sitemap: https://moneywisestarter.edu/sitemap.xml

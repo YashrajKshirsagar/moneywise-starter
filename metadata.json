@@ -1,0 +1,6 @@
+{
+  "name": "MoneyWise Starter",
+  "description": "Simple Money Lessons for a Smarter Financial Future. An educational personal finance platform for beginners covering budgeting, low-income saving, emergency funds, credit scores, and investing.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
