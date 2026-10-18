@@ -60,10 +60,35 @@ export default function App() {
     setCurrentPath(normalized);
   };
 
-  // Find matching article if path matches an article URL
+  // Support /blog/* deep links and slug aliases
+  const cleanPath = currentPath.replace(/\/$/, '').replace(/^\//, '');
+  const slugFromBlog = cleanPath.startsWith('blog/') ? cleanPath.replace(/^blog\//, '') : cleanPath;
+
+  const aliasMap: Record<string, string> = {
+    'student-budget-planner': 'budgeting-for-beginners',
+    'budgeting': 'budgeting-for-beginners',
+    'credit-score-guide': 'credit-score-basics',
+    'credit-basics': 'credit-score-basics',
+    'saving-money': 'save-money-on-low-income',
+    'low-income-saving': 'save-money-on-low-income',
+    'emergency-fund': 'emergency-fund-guide',
+    'investing-basics': 'investing-for-beginners',
+  };
+
+  const resolvedSlug = aliasMap[slugFromBlog] || slugFromBlog;
+
+  // Find matching article if path matches an article URL, slug, or alias
   const currentArticle = ARTICLES_DATA.find(
-    (art) => art.url === currentPath || `${art.url.replace(/\/$/, '')}` === currentPath.replace(/\/$/, '')
+    (art) =>
+      art.url === currentPath ||
+      art.url.replace(/\/$/, '') === currentPath.replace(/\/$/, '') ||
+      art.slug === resolvedSlug ||
+      art.slug === slugFromBlog
   );
+
+  const isDebtManagement =
+    currentPath.includes('/debt-management') ||
+    slugFromBlog === 'debt-management';
 
   return (
     <div className="min-h-screen flex flex-col bg-[#faf8f5] text-[#242926]">
@@ -76,7 +101,7 @@ export default function App() {
           <HomeView onNavigate={navigateTo} />
         ) : currentPath.includes('/seo-project-matrix') ? (
           <MatrixView onNavigate={navigateTo} />
-        ) : currentPath.includes('/debt-management') ? (
+        ) : isDebtManagement ? (
           <DebtManagementView onNavigate={navigateTo} />
         ) : currentArticle ? (
           <ArticleView article={currentArticle} onNavigate={navigateTo} />
