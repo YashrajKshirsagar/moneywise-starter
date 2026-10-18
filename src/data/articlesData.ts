@@ -1,7 +1,8 @@
 import { Article } from '../types';
 
-// Asset references generated via generate_image tool
-export const HERO_IMAGE = '/src/assets/images/hero_finance_desk_1792258665781.jpg';
+// Reliable high-definition Unsplash imagery
+export const HERO_IMAGE = 'https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&w=800&q=80';
+export const DEBT_MANAGEMENT_IMAGE = 'https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?auto=format&fit=crop&w=800&q=80';
 
 export const ARTICLES_DATA: Article[] = [
   // ==========================================
@@ -19,7 +20,7 @@ export const ARTICLES_DATA: Article[] = [
     relatedKeywords: ['how to create a monthly budget', 'personal budgeting tips'],
     questionH2: 'How Do Beginners Create a Monthly Budget?',
     directAnswer: 'Beginners create a monthly budget by calculating their total take-home income, listing fixed and variable expenses, subtracting total costs from income, and allocating remaining funds toward emergency savings or debt payoff using a structured framework such as the 50/30/20 guideline.',
-    featuredImage: '/src/assets/images/budgeting_ledger_desk_1792258666042.jpg',
+    featuredImage: 'https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&w=800&q=80',
     imageAlt: 'Open monthly budget ledger on a warm wooden desk with handwritten income and expense categories, pencil, and coffee cup',
     excerpt: 'Master the fundamentals of cash flow. Learn how to calculate net earnings, categorize fixed versus variable bills, avoid common traps, and build a stress-free spending plan.',
     readingTime: '6 min read',
@@ -168,7 +169,7 @@ export const ARTICLES_DATA: Article[] = [
     relatedKeywords: ['money-saving tips', 'how to reduce monthly expenses'],
     questionH2: 'How Can You Save Money When Your Income Is Low?',
     directAnswer: 'You can save money on a low income by auditing recurring subscriptions, reducing food and utility waste, setting up automated micro-savings of even $5 to $20 per paycheck, and directing small tax refunds or windfalls into an inaccessible buffer account rather than relying on extreme deprivation.',
-    featuredImage: '/src/assets/images/saving_money_jars_1792258666934.jpg',
+    featuredImage: 'https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?auto=format&fit=crop&w=800&q=80',
     imageAlt: 'Three clear glass savings jars labeled Vacation, Emergency, and Car on a bright wooden kitchen table with coins and paper notes',
     excerpt: 'Saving money when every dollar is spoken for is difficult, but not impossible. Explore proven methods to trim living expenses, build a safety net, and protect your mental peace.',
     readingTime: '6 min read',
@@ -299,7 +300,7 @@ export const ARTICLES_DATA: Article[] = [
     relatedKeywords: ['how much emergency savings do I need', 'emergency fund for beginners'],
     questionH2: 'How Much Should a Beginner Save in an Emergency Fund?',
     directAnswer: 'A beginner should first save an initial starter cushion of $500 to $1,000 to handle immediate minor surprises, and subsequently build toward three to six months of baseline non-negotiable living expenses stored in an FDIC- or NCUA-insured high-yield savings account.',
-    featuredImage: '/src/assets/images/emergency_fund_shield_1792258667332.jpg',
+    featuredImage: 'https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?auto=format&fit=crop&w=800&q=80',
     imageAlt: 'Beige paper envelope labeled Emergency Fund resting on an oak desk beside a small succulent and leather notebook',
     excerpt: 'An emergency fund is your financial shield against life unpredictable events. Discover how to calculate your baseline target, select the right account, and replenish used funds.',
     readingTime: '7 min read',
@@ -440,7 +441,7 @@ export const ARTICLES_DATA: Article[] = [
     relatedKeywords: ['how to improve your credit score', 'factors that affect credit score'],
     questionH2: 'What Factors Affect Your Credit Score?',
     directAnswer: 'The primary factors that affect your credit score are payment history (whether you pay on time), credit utilization ratio (how much of your available limit you use), length of credit history, credit mix across revolving and installment accounts, and recent hard inquiries.',
-    featuredImage: '/src/assets/images/credit_score_report_1792258668460.jpg',
+    featuredImage: 'https://images.unsplash.com/photo-1559526324-4b87b5e36e44?auto=format&fit=crop&w=800&q=80',
     imageAlt: 'Young professional reviewing a printed credit report document with reading glasses and pen at a warm oak study desk',
     excerpt: 'Demystify your credit profile. Learn how scoring models evaluate risk, why payment history and utilization rule your score, and how credit systems operate globally.',
     readingTime: '6 min read',
@@ -567,7 +568,7 @@ export const ARTICLES_DATA: Article[] = [
     relatedKeywords: ['investment basics', 'risk and return explained'],
     questionH2: 'How Should Beginners Learn About Investing?',
     directAnswer: 'Beginners should learn about investing by first understanding the difference between saving and investing, mastering foundational assets like broad-market index funds, paying off high-interest debt, establishing an emergency fund, and focusing on low-cost diversification over a multi-decade time horizon.',
-    featuredImage: '/src/assets/images/investing_growth_plant_1792258667478.jpg',
+    featuredImage: 'https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?auto=format&fit=crop&w=800&q=80',
     imageAlt: 'Small green seedling plant in a terracotta pot growing beside an open notebook showing compound growth curves on a warm wooden desk',
     excerpt: 'Demystify the stock market. Learn how stocks, bonds, and broad-market index funds work, why fees matter, and how compound growth rewards patient long-term investors.',
     readingTime: '7 min read',

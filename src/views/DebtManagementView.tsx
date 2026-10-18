@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Breadcrumbs } from '../components/Breadcrumbs';
 import { SEOHead } from '../components/SEOHead';
+import { DEBT_MANAGEMENT_IMAGE } from '../data/articlesData';
 import { 
   ArrowRight, 
   CheckCircle2, 
@@ -24,6 +25,7 @@ export const DebtManagementView: React.FC<DebtManagementViewProps> = ({ onNaviga
     headline: 'Debt Management for Beginners: Avalanche vs. Snowball Payoff Strategies',
     name: 'Debt Management Strategies for Beginners',
     description: 'Learn how to manage and eliminate debt as a beginner. Compare the Debt Avalanche and Debt Snowball methods, understand interest costs, and reclaim cash flow.',
+    image: DEBT_MANAGEMENT_IMAGE,
     url: 'https://moneywisestarter.edu/debt-management/',
     author: {
       '@type': 'Organization',
@@ -77,6 +79,22 @@ export const DebtManagementView: React.FC<DebtManagementViewProps> = ({ onNaviga
             Eliminating high-interest consumer debt is the single most mathematically effective investment a beginner can make.
           </p>
         </header>
+
+        {/* Featured Image */}
+        <div className="mb-10">
+          <figure className="rounded-2xl overflow-hidden border border-[#ded6c7] bg-[#f2ede4] shadow-sm">
+            <img
+              src={DEBT_MANAGEMENT_IMAGE}
+              alt="Financial calculation documents, debt repayment plan, and pen on a study desk"
+              className="w-full max-h-[480px] object-cover"
+              loading="eager"
+              referrerPolicy="no-referrer"
+            />
+            <figcaption className="px-4 py-3 bg-[#f8f5ee] border-t border-[#ded6c7] text-xs font-serif italic text-[#63726a]">
+              Fig. 1 — Structured debt management empowers consumers to systematically retire balances and reduce interest drag.
+            </figcaption>
+          </figure>
+        </div>
 
         {/* Direct Answer Box for Debt Elimination */}
         <div className="bg-[#f9f7f2] border-2 border-[#16382c] rounded-xl p-5 mb-10">

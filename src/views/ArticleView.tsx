@@ -58,8 +58,9 @@ export const ArticleView: React.FC<ArticleViewProps> = ({ article, onNavigate })
     '@type': 'BlogPosting',
     headline: article.h1,
     name: article.title,
-    description: article.metaDescription,
-    image: `https://moneywisestarter.edu${article.featuredImage}`,
+    image: article.featuredImage.startsWith('http')
+      ? article.featuredImage
+      : `https://moneywisestarter.edu${article.featuredImage}`,
     datePublished: '2026-10-17T09:00:00+00:00',
     dateModified: '2026-10-17T10:00:00+00:00',
     mainEntityOfPage: {
