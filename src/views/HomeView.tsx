@@ -106,7 +106,7 @@ export const HomeView: React.FC<HomeViewProps> = ({ onNavigate }) => {
 
                 {/* Quiet Editorial Indicators (NO PILLS) */}
                 <div className="pt-4 flex flex-wrap items-center gap-3 text-xs text-[#6a7970]">
-                  <span>5 Comprehensive Guides</span>
+                  <span>13 Comprehensive Educational Articles</span>
                   <span aria-hidden="true">·</span>
                   <span>Interactive Financial Calculators</span>
                   <span aria-hidden="true">·</span>
@@ -190,14 +190,14 @@ export const HomeView: React.FC<HomeViewProps> = ({ onNavigate }) => {
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-10 pb-4 border-b border-[#e5dfd4]">
             <div>
               <span className="text-xs uppercase tracking-widest font-semibold text-[#8b6b23] block mb-1">
-                Foundational Series
+                Complete Curriculum Series
               </span>
               <h2 className="text-3xl sm:text-4xl font-serif font-bold text-[#16382c] tracking-tight">
-                Featured Educational Articles
+                Educational Articles & Student Finance Guides
               </h2>
             </div>
             <p className="text-xs text-[#63726a] max-w-sm">
-              Each article is structured with direct Answer Engine (AEO) responses, data tables, and reputable government citations.
+              All 13 articles structured with direct Answer Engine (AEO) responses, data tables, and reputable regulatory citations.
             </p>
           </div>
 

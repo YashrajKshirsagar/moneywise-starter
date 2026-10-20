@@ -1,4 +1,6 @@
 import { Article } from '../types';
+import { STUDENT_ARTICLES_PART1 } from './articles/studentArticlesPart1';
+import { STUDENT_ARTICLES_PART2 } from './articles/studentArticlesPart2';
 
 // Reliable high-definition Unsplash imagery
 export const HERO_IMAGE = 'https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&w=800&q=80';
@@ -701,5 +703,7 @@ export const ARTICLES_DATA: Article[] = [
       }
     ],
     relatedSlugs: ['emergency-fund-guide', 'budgeting-for-beginners', 'credit-score-basics']
-  }
+  },
+  ...STUDENT_ARTICLES_PART1,
+  ...STUDENT_ARTICLES_PART2
 ];

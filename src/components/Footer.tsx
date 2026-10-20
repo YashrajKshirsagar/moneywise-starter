@@ -36,7 +36,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
           {/* Core Guides Navigation */}
           <div>
             <h3 className="text-xs font-semibold uppercase tracking-widest text-[#16382c] mb-4">
-              Educational Guides
+              Foundational Guides
             </h3>
             <ul className="space-y-2.5 text-sm text-[#444f48]">
               <li>
@@ -59,20 +59,29 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
               </li>
               <li>
                 <a
-                  href="/emergency-fund-guide/"
-                  onClick={(e) => handleLinkClick('/emergency-fund-guide/', e)}
+                  href="/blog/emergency-fund-for-students"
+                  onClick={(e) => handleLinkClick('/blog/emergency-fund-for-students', e)}
                   className="hover:text-[#16382c] hover:underline transition-colors"
                 >
-                  Emergency Fund Guide
+                  Student Emergency Fund
                 </a>
               </li>
               <li>
                 <a
-                  href="/credit-score-basics/"
-                  onClick={(e) => handleLinkClick('/credit-score-basics/', e)}
+                  href="/blog/education-loan-repayment"
+                  onClick={(e) => handleLinkClick('/blog/education-loan-repayment', e)}
                   className="hover:text-[#16382c] hover:underline transition-colors"
                 >
-                  Credit Score Basics
+                  Education Loan Repayment
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/blog/digital-wallet-expense-tracking"
+                  onClick={(e) => handleLinkClick('/blog/digital-wallet-expense-tracking', e)}
+                  className="hover:text-[#16382c] hover:underline transition-colors"
+                >
+                  UPI & Digital Wallet Habits
                 </a>
               </li>
               <li>
@@ -82,15 +91,6 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
                   className="hover:text-[#16382c] hover:underline transition-colors"
                 >
                   Debt Management Strategies
-                </a>
-              </li>
-              <li>
-                <a
-                  href="/investing-for-beginners/"
-                  onClick={(e) => handleLinkClick('/investing-for-beginners/', e)}
-                  className="hover:text-[#16382c] hover:underline transition-colors"
-                >
-                  Investing for Beginners
                 </a>
               </li>
             </ul>
