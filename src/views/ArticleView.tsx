@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Article } from '../types';
-import { ARTICLES_DATA } from '../data/articlesData';
+import { ARTICLES_DATA, SITE_URL } from '../data/articlesData';
 import { Breadcrumbs } from '../components/Breadcrumbs';
 import { SEOHead } from '../components/SEOHead';
 import { BudgetCalculator } from '../components/BudgetCalculator';
@@ -60,22 +60,22 @@ export const ArticleView: React.FC<ArticleViewProps> = ({ article, onNavigate })
     name: article.title,
     image: article.featuredImage.startsWith('http')
       ? article.featuredImage
-      : `https://moneywisestarter.edu${article.featuredImage}`,
+      : `${SITE_URL}${article.featuredImage}`,
     datePublished: '2026-10-17T09:00:00+00:00',
-    dateModified: '2026-10-17T10:00:00+00:00',
+    dateModified: '2026-10-20T10:00:00+00:00',
     mainEntityOfPage: {
       '@type': 'WebPage',
-      '@id': `https://moneywisestarter.edu${article.url}`
+      '@id': `${SITE_URL}${article.url}`
     },
     author: {
       '@type': 'Organization',
       name: 'MoneyWise Starter Editorial Team',
-      url: 'https://moneywisestarter.edu/'
+      url: `${SITE_URL}/`
     },
     publisher: {
       '@type': 'Organization',
       name: 'MoneyWise Starter',
-      url: 'https://moneywisestarter.edu/'
+      url: `${SITE_URL}/`
     },
     keywords: [article.primaryKeyword, ...article.relatedKeywords].join(', '),
     articleSection: article.category,
@@ -87,10 +87,10 @@ export const ArticleView: React.FC<ArticleViewProps> = ({ article, onNavigate })
       <SEOHead
         title={`${article.htmlTitle} | MoneyWise Starter`}
         description={article.metaDescription}
-        canonicalUrl={`https://moneywisestarter.edu${article.url}`}
+        canonicalUrl={`${SITE_URL}${article.url}`}
         ogType="article"
         articleData={{
-          publishedTime: '2026-10-17',
+          publishedTime: '2026-10-20',
           category: article.category,
           wordCount: article.wordCount
         }}

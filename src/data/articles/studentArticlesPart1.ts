@@ -222,12 +222,12 @@ export const STUDENT_ARTICLES_PART1: Article[] = [
         context: 'Discover how to declare Section 80E deductions on your first salary ITR filing.'
       },
       {
-        anchor: 'credit score basics guide',
-        path: '/credit-score-basics/',
+        anchor: 'credit score guide',
+        path: '/blog/credit-score-guide',
         context: 'Understand how student loan repayment history builds your CIBIL score.'
       }
     ],
-    relatedSlugs: ['income-tax-basics-for-freshers', 'credit-score-basics', 'freelance-income-management']
+    relatedSlugs: ['income-tax-basics-for-freshers', 'credit-score-guide', 'freelance-income-management']
   },
 
   // ==========================================

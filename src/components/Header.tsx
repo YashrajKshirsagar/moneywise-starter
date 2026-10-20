@@ -11,11 +11,11 @@ export const Header: React.FC<HeaderProps> = ({ currentPath, onNavigate }) => {
 
   const navLinks = [
     { label: 'Home', path: '/' },
-    { label: 'Budgeting', path: '/budgeting-for-beginners/' },
-    { label: 'Saving Money', path: '/save-money-on-low-income/' },
-    { label: 'Credit Basics', path: '/credit-score-basics/' },
-    { label: 'Debt Management', path: '/debt-management/' },
-    { label: 'Investing Basics', path: '/investing-for-beginners/' },
+    { label: 'Budgeting', path: '/blog/student-budget-planner' },
+    { label: 'Investing', path: '/blog/investing-for-beginners' },
+    { label: 'Credit & Debt', path: '/blog/credit-score-guide' },
+    { label: 'Emergency Fund', path: '/blog/emergency-fund-for-students' },
+    { label: 'Debt Strategies', path: '/debt-management' },
   ];
 
   const handleLinkClick = (path: string, e: React.MouseEvent) => {
@@ -62,10 +62,10 @@ export const Header: React.FC<HeaderProps> = ({ currentPath, onNavigate }) => {
           {/* Zone 3: 1 Primary Action */}
           <div className="hidden sm:flex items-center gap-3 shrink-0">
             <a
-              href="/seo-project-matrix/"
-              onClick={(e) => handleLinkClick('/seo-project-matrix/', e)}
+              href="/seo-project-matrix"
+              onClick={(e) => handleLinkClick('/seo-project-matrix', e)}
               className={`inline-flex items-center gap-1.5 px-4 py-2 text-xs font-semibold uppercase tracking-wider rounded-md transition-all whitespace-nowrap shrink-0 ${
-                currentPath === '/seo-project-matrix/'
+                currentPath === '/seo-project-matrix'
                   ? 'bg-[#16382c] text-white shadow-sm'
                   : 'bg-[#ede7db] text-[#16382c] hover:bg-[#e2dacb]'
               }`}
@@ -112,8 +112,8 @@ export const Header: React.FC<HeaderProps> = ({ currentPath, onNavigate }) => {
           })}
           <div className="pt-3 border-t border-[#e7e1d5]">
             <a
-              href="/seo-project-matrix/"
-              onClick={(e) => handleLinkClick('/seo-project-matrix/', e)}
+              href="/seo-project-matrix"
+              onClick={(e) => handleLinkClick('/seo-project-matrix', e)}
               className="block w-full text-center px-4 py-2.5 text-sm font-semibold uppercase tracking-wider text-white bg-[#16382c] rounded-md hover:bg-[#112920] transition-colors"
             >
               View SEO Project Matrix

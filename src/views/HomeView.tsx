@@ -19,27 +19,27 @@ export const HomeView: React.FC<HomeViewProps> = ({ onNavigate }) => {
     {
       title: 'Cash Flow & Budgeting',
       summary: 'Learn how to calculate take-home pay and balance needs, wants, and savings without restrictive deprivation.',
-      targetArticle: '/budgeting-for-beginners/'
+      targetArticle: '/blog/student-budget-planner'
     },
     {
-      title: 'Saving on a Low Income',
-      summary: 'Practical micro-savings habits and daily expense reductions designed specifically for tight household budgets.',
-      targetArticle: '/save-money-on-low-income/'
+      title: 'Emergency Savings',
+      summary: 'Step-by-step guidance on creating a student cushion and building a ₹10,000 liquid safety buffer.',
+      targetArticle: '/blog/emergency-fund-for-students'
     },
     {
-      title: 'Emergency Cash Reserves',
-      summary: 'Step-by-step guidance on creating a starter cushion and building a 3-to-6-month liquid security buffer.',
-      targetArticle: '/emergency-fund-guide/'
+      title: 'Student Loan Repayment',
+      summary: 'Navigate the moratorium period, simple interest capitalization, and Section 80E tax deductions.',
+      targetArticle: '/blog/education-loan-repayment'
     },
     {
       title: 'Credit Score Demystification',
       summary: 'Understand the exact factors credit bureaus score, how utilization works, and why interest is unnecessary.',
-      targetArticle: '/credit-score-basics/'
+      targetArticle: '/blog/credit-score-guide'
     },
     {
       title: 'Disciplined Long-Term Investing',
       summary: 'Master stocks, bonds, broad-market index funds, and compound growth without falling for hype or speculation.',
-      targetArticle: '/investing-for-beginners/'
+      targetArticle: '/blog/investing-for-beginners'
     }
   ];
 
@@ -47,8 +47,8 @@ export const HomeView: React.FC<HomeViewProps> = ({ onNavigate }) => {
     <>
       <SEOHead
         title="MoneyWise Starter – Simple Money Lessons for a Smarter Financial Future"
-        description="Master personal finance basics with free educational guides on budgeting for beginners, low-income saving, emergency funds, credit scores, and investing."
-        canonicalUrl="https://moneywisestarter.edu/"
+        description="Master personal finance basics with 13 free educational guides on student budgeting, low-income saving, emergency funds, credit scores, taxes, and investing."
+        canonicalUrl="https://moneywise-starter-liard.vercel.app/"
         ogType="website"
       />
 
@@ -74,7 +74,7 @@ export const HomeView: React.FC<HomeViewProps> = ({ onNavigate }) => {
                 </p>
 
                 <p className="text-base text-[#526058] leading-relaxed max-w-2xl">
-                  Personal finance is rarely taught in school, leaving many adults to navigate banking, credit cards, and investments through stressful trial and error. MoneyWise Starter provides five clear, comprehensive guides written in plain English to help you build resilient money habits step by step.
+                  Personal finance is rarely taught in school, leaving many adults to navigate banking, credit cards, taxes, and investments through stressful trial and error. MoneyWise Starter provides 13 clear, comprehensive guides written in plain English to help you build resilient money habits step by step.
                 </p>
 
                 <div className="pt-2 flex flex-wrap items-center gap-4">
@@ -86,15 +86,15 @@ export const HomeView: React.FC<HomeViewProps> = ({ onNavigate }) => {
                     }}
                     className="inline-flex items-center gap-2 px-6 py-3.5 bg-[#16382c] text-white font-medium text-sm rounded-lg hover:bg-[#102a21] transition-colors shadow-sm"
                   >
-                    <span>Read The Five Core Guides</span>
+                    <span>Read All 13 Educational Guides</span>
                     <ArrowRight className="w-4 h-4" />
                   </button>
 
                   <a
-                    href="/seo-project-matrix/"
+                    href="/seo-project-matrix"
                     onClick={(e) => {
                       e.preventDefault();
-                      onNavigate('/seo-project-matrix/');
+                      onNavigate('/seo-project-matrix');
                       window.scrollTo({ top: 0, behavior: 'smooth' });
                     }}
                     className="inline-flex items-center gap-2 px-5 py-3.5 bg-[#ede7db] text-[#16382c] font-medium text-sm rounded-lg hover:bg-[#e2dacb] transition-colors"

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Breadcrumbs } from '../components/Breadcrumbs';
 import { SEOHead } from '../components/SEOHead';
-import { DEBT_MANAGEMENT_IMAGE } from '../data/articlesData';
+import { DEBT_MANAGEMENT_IMAGE, SITE_URL } from '../data/articlesData';
 import { 
   ArrowRight, 
   CheckCircle2, 
@@ -26,16 +26,16 @@ export const DebtManagementView: React.FC<DebtManagementViewProps> = ({ onNaviga
     name: 'Debt Management Strategies for Beginners',
     description: 'Learn how to manage and eliminate debt as a beginner. Compare the Debt Avalanche and Debt Snowball methods, understand interest costs, and reclaim cash flow.',
     image: DEBT_MANAGEMENT_IMAGE,
-    url: 'https://moneywisestarter.edu/debt-management/',
+    url: `${SITE_URL}/debt-management`,
     author: {
       '@type': 'Organization',
       name: 'MoneyWise Starter Editorial Team',
-      url: 'https://moneywisestarter.edu/'
+      url: `${SITE_URL}/`
     },
     publisher: {
       '@type': 'Organization',
       name: 'MoneyWise Starter',
-      url: 'https://moneywisestarter.edu/'
+      url: `${SITE_URL}/`
     }
   };
 
@@ -44,7 +44,7 @@ export const DebtManagementView: React.FC<DebtManagementViewProps> = ({ onNaviga
       <SEOHead
         title="Debt Management for Beginners: Avalanche vs. Snowball Guide | MoneyWise Starter"
         description="Comprehensive debt management guide for beginners. Learn how to pay down consumer debt, compare Avalanche vs Snowball methods, and avoid predatory loans."
-        canonicalUrl="https://moneywisestarter.edu/debt-management/"
+        canonicalUrl={`${SITE_URL}/debt-management`}
         ogType="article"
         jsonLd={jsonLdData}
       />
@@ -261,47 +261,62 @@ export const DebtManagementView: React.FC<DebtManagementViewProps> = ({ onNaviga
               <div className="flex items-center gap-2">
                 <ArrowRight className="w-4 h-4 text-[#16382c]" />
                 <a
-                  href="/credit-score-basics/"
+                  href="/blog/credit-score-guide"
                   onClick={(e) => {
                     e.preventDefault();
-                    onNavigate('/credit-score-basics/');
+                    onNavigate('/blog/credit-score-guide');
                     window.scrollTo({ top: 0, behavior: 'smooth' });
                   }}
                   className="font-semibold text-[#16382c] hover:underline"
                 >
-                  Credit Score Basics Guide
+                  Credit & Debt Guide
                 </a>
                 <span className="text-xs text-[#63726a]">— Understand how lowering balances directly improves your credit utilization ratio.</span>
               </div>
               <div className="flex items-center gap-2">
                 <ArrowRight className="w-4 h-4 text-[#16382c]" />
                 <a
-                  href="/budgeting-for-beginners/"
+                  href="/blog/student-budget-planner"
                   onClick={(e) => {
                     e.preventDefault();
-                    onNavigate('/budgeting-for-beginners/');
+                    onNavigate('/blog/student-budget-planner');
                     window.scrollTo({ top: 0, behavior: 'smooth' });
                   }}
                   className="font-semibold text-[#16382c] hover:underline"
                 >
-                  Budgeting for Beginners
+                  Student Budget Planner
                 </a>
                 <span className="text-xs text-[#63726a]">— Build a monthly cash flow system to fund your debt payoff goals.</span>
               </div>
               <div className="flex items-center gap-2">
                 <ArrowRight className="w-4 h-4 text-[#16382c]" />
                 <a
-                  href="/emergency-fund-guide/"
+                  href="/blog/emergency-fund-for-students"
                   onClick={(e) => {
                     e.preventDefault();
-                    onNavigate('/emergency-fund-guide/');
+                    onNavigate('/blog/emergency-fund-for-students');
                     window.scrollTo({ top: 0, behavior: 'smooth' });
                   }}
                   className="font-semibold text-[#16382c] hover:underline"
                 >
-                  Emergency Fund Guide
+                  Student Emergency Fund
                 </a>
-                <span className="text-xs text-[#63726a]">— Why saving an initial $1,000 buffer prevents new credit card debt while paying off old balances.</span>
+                <span className="text-xs text-[#63726a]">— Why saving an initial buffer prevents new debt while paying off old balances.</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <ArrowRight className="w-4 h-4 text-[#16382c]" />
+                <a
+                  href="/blog/education-loan-repayment"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    onNavigate('/blog/education-loan-repayment');
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                  }}
+                  className="font-semibold text-[#16382c] hover:underline"
+                >
+                  Education Loan Repayment
+                </a>
+                <span className="text-xs text-[#63726a]">— Strategies for clearing college debt and claiming Section 80E tax benefits.</span>
               </div>
             </div>
           </section>

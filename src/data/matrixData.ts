@@ -15,34 +15,34 @@ export const SEO_MATRIX_DATA: SEOMatrixRow[] = [
     onPageFocus: "Comprehensive hub introducing foundational pillars: cash flow budgeting, emergency reserves, student debt elimination, and long-term wealth building."
   },
   {
-    page: "Article 1: Budgeting for Beginners",
-    path: "/budgeting-for-beginners/",
-    mainKeyword: "budgeting for beginners",
+    page: "Article 1: Student Budget Planner",
+    path: "/blog/student-budget-planner",
+    mainKeyword: "student budget planner",
     relatedKeywords: [
       "how to create a monthly budget",
       "personal budgeting tips"
     ],
     searchIntent: "Informational",
     searchVolume: "Verify in keyword research tool",
-    questionItAnswers: "How can beginners create a monthly budget?",
-    onPageFocus: "Targeted guide detailing net income calculation, fixed vs. variable categorization, and the 50/30/20 budget allocation."
+    questionItAnswers: "How Do Beginners Create a Monthly Budget?",
+    onPageFocus: "Targeted guide detailing net income calculation, fixed vs. variable categorization, and the 50/30/20 budget allocation for college students."
   },
   {
-    page: "Article 2: How to Save Money on a Low Income",
-    path: "/save-money-on-low-income/",
-    mainKeyword: "how to save money on a low income",
+    page: "Article 2: Investing Guide for Beginners",
+    path: "/blog/investing-for-beginners",
+    mainKeyword: "investing for beginners",
     relatedKeywords: [
-      "money-saving tips",
-      "how to reduce monthly expenses"
+      "investment basics",
+      "risk and return explained"
     ],
     searchIntent: "Informational",
     searchVolume: "Verify in keyword research tool",
-    questionItAnswers: "How can someone save money on a low income?",
-    onPageFocus: "Actionable low-overhead cash conservation strategies including micro-saving, audit of recurring utility leaks, and sustainable grocery habits."
+    questionItAnswers: "How Should Beginners Learn About Investing?",
+    onPageFocus: "Core asset classes (stocks, bonds, broad-market index funds), the critical role of expense ratios, diversification, and compound growth."
   },
   {
-    page: "Article 3: Credit Score Basics",
-    path: "/credit-score-basics/",
+    page: "Article 3: Credit & Debt Management",
+    path: "/blog/credit-score-guide",
     mainKeyword: "credit score basics",
     relatedKeywords: [
       "how to improve your credit score",
@@ -50,8 +50,8 @@ export const SEO_MATRIX_DATA: SEOMatrixRow[] = [
     ],
     searchIntent: "Informational",
     searchVolume: "Verify in keyword research tool",
-    questionItAnswers: "What affects a credit score?",
-    onPageFocus: "Demystifying credit bureau scoring variables: payment history, credit utilization ratio, account age, and inquiry velocity."
+    questionItAnswers: "What Factors Affect Your Credit Score?",
+    onPageFocus: "Demystifying credit bureau scoring variables: payment history, credit utilization ratio, account age, inquiry velocity, and global credit differences."
   },
   {
     page: "Article 4: Emergency Fund for Students",

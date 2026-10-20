@@ -12,15 +12,14 @@ export default function App() {
   const getInitialPath = (): string => {
     if (typeof window === 'undefined') return '/';
     let path = window.location.pathname;
-    
-    // Support hash-based fallback (e.g. /#/budgeting-for-beginners/) if hosting requires it
+
+    // Support hash-based fallback (e.g. /#/blog/student-budget-planner) if hosting requires it
     if (window.location.hash && window.location.hash.startsWith('#/')) {
       path = window.location.hash.slice(1);
     }
-    
-    // Ensure trailing slash for article paths if not present
-    if (path.length > 1 && !path.endsWith('/')) {
-      path = `${path}/`;
+
+    if (path.length > 1 && path.endsWith('/')) {
+      path = path.slice(0, -1);
     }
     return path || '/';
   };
@@ -34,8 +33,8 @@ export default function App() {
       if (window.location.hash && window.location.hash.startsWith('#/')) {
         path = window.location.hash.slice(1);
       }
-      if (path.length > 1 && !path.endsWith('/')) {
-        path = `${path}/`;
+      if (path.length > 1 && path.endsWith('/')) {
+        path = path.slice(0, -1);
       }
       setCurrentPath(path || '/');
     };
@@ -46,18 +45,18 @@ export default function App() {
 
   const navigateTo = (path: string) => {
     let normalized = path;
-    if (normalized.length > 1 && !normalized.endsWith('/')) {
-      normalized = `${normalized}/`;
+    if (normalized.length > 1 && normalized.endsWith('/')) {
+      normalized = normalized.slice(0, -1);
     }
-    
+
     try {
       window.history.pushState({}, '', normalized);
     } catch {
-      // Fallback if pushState is restricted
       window.location.hash = normalized;
     }
-    
+
     setCurrentPath(normalized);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   // Support /blog/* deep links and slug aliases
@@ -65,14 +64,21 @@ export default function App() {
   const slugFromBlog = cleanPath.startsWith('blog/') ? cleanPath.replace(/^blog\//, '') : cleanPath;
 
   const aliasMap: Record<string, string> = {
-    'student-budget-planner': 'budgeting-for-beginners',
-    'budgeting': 'budgeting-for-beginners',
-    'credit-score-guide': 'credit-score-basics',
-    'credit-basics': 'credit-score-basics',
-    'saving-money': 'save-money-on-low-income',
-    'low-income-saving': 'save-money-on-low-income',
-    'emergency-fund': 'emergency-fund-guide',
-    'investing-basics': 'investing-for-beginners',
+    'budgeting-for-beginners': 'student-budget-planner',
+    'budgeting': 'student-budget-planner',
+    'credit-score-basics': 'credit-score-guide',
+    'credit-basics': 'credit-score-guide',
+    'emergency-fund-guide': 'emergency-fund-for-students',
+    'emergency-fund': 'emergency-fund-for-students',
+    'save-money-on-low-income': 'student-discounts-india',
+    'student-loans': 'education-loan-repayment',
+    'upi-tracking': 'digital-wallet-expense-tracking',
+    'income-tax': 'income-tax-basics-for-freshers',
+    'freelancing': 'freelance-income-management',
+    'insurance': 'term-insurance-for-youth',
+    'compounding': 'power-of-compounding-youth',
+    'scams': 'financial-fraud-awareness-youth',
+    'goals': 'goal-based-investing-students',
   };
 
   const resolvedSlug = aliasMap[slugFromBlog] || slugFromBlog;
@@ -80,15 +86,20 @@ export default function App() {
   // Find matching article if path matches an article URL, slug, or alias
   const currentArticle = ARTICLES_DATA.find(
     (art) =>
-      art.url === currentPath ||
       art.url.replace(/\/$/, '') === currentPath.replace(/\/$/, '') ||
       art.slug === resolvedSlug ||
-      art.slug === slugFromBlog
+      art.slug === slugFromBlog ||
+      cleanPath === `blog/${art.slug}` ||
+      cleanPath === art.slug
   );
 
   const isDebtManagement =
-    currentPath.includes('/debt-management') ||
-    slugFromBlog === 'debt-management';
+    cleanPath === 'debt-management' ||
+    cleanPath === 'blog/debt-management';
+
+  const isMatrix =
+    cleanPath === 'seo-project-matrix' ||
+    cleanPath === 'matrix';
 
   return (
     <div className="min-h-screen flex flex-col bg-[#faf8f5] text-[#242926]">
@@ -99,7 +110,7 @@ export default function App() {
       <main className="flex-1">
         {currentPath === '/' ? (
           <HomeView onNavigate={navigateTo} />
-        ) : currentPath.includes('/seo-project-matrix') ? (
+        ) : isMatrix ? (
           <MatrixView onNavigate={navigateTo} />
         ) : isDebtManagement ? (
           <DebtManagementView onNavigate={navigateTo} />

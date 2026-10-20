@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { SEO_MATRIX_DATA, SEO_METHODOLOGY_NOTE } from '../data/matrixData';
+import { SITE_URL } from '../data/articlesData';
 import { SEOHead } from '../components/SEOHead';
 import { Breadcrumbs } from '../components/Breadcrumbs';
 import { 
@@ -75,7 +76,7 @@ export const MatrixView: React.FC<MatrixViewProps> = ({ onNavigate }) => {
     '@type': 'Table',
     name: 'MoneyWise Starter SEO Project Matrix',
     about: 'College SEO and Answer Engine Optimization (AEO) keyword planning matrix for MoneyWise Starter educational blog.',
-    url: 'https://moneywisestarter.edu/seo-project-matrix/'
+    url: `${SITE_URL}/seo-project-matrix`
   };
 
   return (
@@ -83,7 +84,7 @@ export const MatrixView: React.FC<MatrixViewProps> = ({ onNavigate }) => {
       <SEOHead
         title="SEO Project Matrix – Keyword Research & Intent Mapping | MoneyWise Starter"
         description="Comprehensive SEO Project Matrix for MoneyWise Starter: primary keyword mapping, search intent classification, and Answer Engine Optimization (AEO) questions."
-        canonicalUrl="https://moneywisestarter.edu/seo-project-matrix/"
+        canonicalUrl={`${SITE_URL}/seo-project-matrix`}
         ogType="website"
         jsonLd={jsonLdData}
       />

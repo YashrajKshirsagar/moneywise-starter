@@ -3,4 +3,4 @@ User-agent: *
 Allow: /
 
 # XML Sitemap location
-Sitemap: https://moneywisestarter.edu/sitemap.xml
+Sitemap: https://moneywise-starter-liard.vercel.app/sitemap.xml
